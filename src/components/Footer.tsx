@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
-            <h3 className="text-2xl font-dancing font-bold text-pink-dark">Sparkle Girl Jewels</h3>
+            <h3 className="text-2xl font-dancing font-bold text-pink-dark">Subhag</h3>
             <p className="text-gray-600">
-              Handcrafted jewelry to make every girl feel special and beautiful.
+              Exquisite handcrafted jewelry that celebrates timeless elegance and beauty.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-500 hover:text-pink-dark transition-colors">
@@ -60,9 +60,9 @@ const Footer = () => {
         </div>
 
         <div className="pt-6 border-t border-gray-100 text-center text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} Sparkle Girl Jewels. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Subhag. All rights reserved.</p>
           <p className="mt-2 flex items-center justify-center">
-            Made with <Heart size={14} className="mx-1 text-pink" /> for girls who love to sparkle
+            Crafted with <Heart size={14} className="mx-1 text-pink" /> for timeless elegance
           </p>
         </div>
       </div>

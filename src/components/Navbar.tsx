@@ -8,13 +8,13 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <h1 className="text-3xl font-dancing font-bold bg-gradient-to-r from-pink to-purple-dark bg-clip-text text-transparent">
-              Sparkle Girl Jewels
+            <h1 className="text-3xl font-dancing font-bold bg-gradient-to-r from-pink-dark to-purple bg-clip-text text-transparent">
+              Subhag
             </h1>
           </Link>
 

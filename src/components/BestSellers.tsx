@@ -39,17 +39,18 @@ const BestSellers = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="section-title">Best Sellers</h2>
+        <h2 className="section-title">Our Bestsellers</h2>
+        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">Explore our most beloved pieces, each carefully crafted to bring out your unique beauty and elegance.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
-            <Card key={product.id} className="jewel-card">
+            <Card key={product.id} className="jewel-card group">
               <CardContent className="p-0">
-                <div className="relative">
+                <div className="relative overflow-hidden">
                   <Link to={`/product/${product.id}`}>
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full aspect-square object-cover object-center"
+                      className="w-full aspect-square object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
                     />
                   </Link>
                   <Button
@@ -72,7 +73,7 @@ const BestSellers = () => {
                 </div>
               </CardContent>
               <CardFooter className="p-4 pt-0 flex justify-between">
-                <Button className="jewel-btn-primary text-sm flex-grow">
+                <Button className="jewel-btn-primary text-sm flex-grow group-hover:bg-pink-dark transition-colors">
                   <ShoppingCart size={16} className="mr-1" />
                   Add to Cart
                 </Button>
