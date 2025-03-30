@@ -4,44 +4,45 @@ import { Button } from "@/components/ui/button";
 import { Heart, ShoppingCart, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const products = [
+// Mock related products - in Shopify this would come from collections or recommendations API
+const relatedProducts = [
   {
-    id: 1,
-    name: "Crystal Butterfly Earrings",
-    price: 24.99,
-    rating: 4.8,
-    image: "https://images.unsplash.com/photo-1635767798638-3665a373f195?q=80&w=1460&auto=format&fit=crop"
-  },
-  {
-    id: 2,
+    id: "2",
     name: "Pearl Pendant Necklace",
     price: 32.99,
     rating: 4.7,
     image: "https://images.unsplash.com/photo-1611085583191-a3b181a88552?q=80&w=1374&auto=format&fit=crop"
   },
   {
-    id: 3,
+    id: "3",
     name: "Gold Chain Bracelet",
     price: 19.99,
     rating: 4.5,
     image: "https://images.unsplash.com/photo-1618403088890-3d9ff6f4c8b1?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 4,
+    id: "4",
     name: "Rose Quartz Heart Ring",
     price: 29.99,
     rating: 4.9,
     image: "https://images.unsplash.com/photo-1603561591411-77139e09f96b?q=80&w=1480&auto=format&fit=crop"
+  },
+  {
+    id: "5",
+    name: "Silver Charm Bracelet",
+    price: 24.99,
+    rating: 4.6,
+    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=1288&auto=format&fit=crop"
   }
 ];
 
-const BestSellers = () => {
+const RelatedProducts = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="section-title">Best Sellers</h2>
+        <h2 className="section-title">You Might Also Like</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product) => (
+          {relatedProducts.map((product) => (
             <Card key={product.id} className="jewel-card">
               <CardContent className="p-0">
                 <div className="relative">
@@ -66,7 +67,9 @@ const BestSellers = () => {
                 </div>
                 <div className="p-4">
                   <Link to={`/product/${product.id}`}>
-                    <h3 className="font-medium text-lg mb-1 line-clamp-1 hover:text-pink-dark transition-colors">{product.name}</h3>
+                    <h3 className="font-medium text-lg mb-1 line-clamp-1 hover:text-pink-dark transition-colors">
+                      {product.name}
+                    </h3>
                   </Link>
                   <p className="text-pink-dark font-semibold">${product.price.toFixed(2)}</p>
                 </div>
@@ -85,4 +88,4 @@ const BestSellers = () => {
   );
 };
 
-export default BestSellers;
+export default RelatedProducts;
