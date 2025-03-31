@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 
@@ -34,9 +33,9 @@ const Testimonials = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((testimonial) => (
             <Card key={testimonial.id} className="jewel-card hover:shadow-xl">
-              <CardContent className="p-6">
+              <CardContent className="p-4 md:p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden mr-3 md:mr-4">
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
@@ -44,12 +43,12 @@ const Testimonials = () => {
                     />
                   </div>
                   <div>
-                    <h4 className="font-medium">{testimonial.name}</h4>
+                    <h4 className="font-medium text-sm md:text-base">{testimonial.name}</h4>
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          size={16}
+                          size={14}
                           className={`${
                             i < testimonial.rating
                               ? "fill-gold-dark text-gold-dark"
@@ -60,7 +59,7 @@ const Testimonials = () => {
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-700 italic">"{testimonial.text}"</p>
+                <p className="text-gray-700 text-sm md:text-base italic">"{testimonial.text}"</p>
               </CardContent>
             </Card>
           ))}

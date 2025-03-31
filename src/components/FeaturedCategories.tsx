@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -39,7 +38,7 @@ const FeaturedCategories = () => {
     <section className="py-16 bg-gradient-to-b from-white to-purple-light/30">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Shop by Category</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category) => (
             <Card key={category.id} className="jewel-card group hover:scale-[1.02] transition-transform duration-300">
               <CardContent className="p-0">

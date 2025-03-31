@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, ShoppingCart, Star } from "lucide-react";
@@ -41,7 +40,7 @@ const BestSellers = () => {
       <div className="container mx-auto px-4">
         <h2 className="section-title">Our Bestsellers</h2>
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">Explore our most beloved pieces, each carefully crafted to bring out your unique beauty and elegance.</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
             <Card key={product.id} className="jewel-card group">
               <CardContent className="p-0">

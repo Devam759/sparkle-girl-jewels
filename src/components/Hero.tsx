@@ -12,29 +12,63 @@ const Hero = () => {
             <Button className="jewel-btn-primary">Menu</Button>
           </div>
         </nav>
-        
-        <div className="flex flex-col md:flex-row items-center mt-12 md:mt-0">
-          <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-            <h2 className="text-4xl md:text-6xl font-dancing font-bold mb-6 text-pink-dark animate-float">
+
+        {/* Main Content */}
+        <div className="mt-8 md:mt-0">
+          {/* Mobile Layout: Heading → Image → Content */}
+          <div className="flex flex-col md:hidden">
+            {/* Heading */}
+            <h2 className="text-4xl font-dancing font-bold mb-6 text-pink-dark animate-float text-center">
               Elegance in Every Detail
             </h2>
-            <p className="text-lg md:text-xl mb-8 max-w-md mx-auto md:mx-0 text-gray-700 leading-relaxed">
-              Discover Subhag's exquisite collection of handcrafted jewelry that captures the essence of timeless beauty.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              {/* <Button className="jewel-btn-primary hover:scale-105 transition-transform">Explore Collection</Button> */}
-              <Button className="jewel-btn-secondary hover:scale-105 transition-transform">New Arrivals</Button>
+            {/* Image */}
+            <div className="flex justify-center mb-6">
+              <div className="relative max-w-[80%] mx-auto">
+                <div className="absolute -top-4 -left-4 w-48 h-48 rounded-full bg-purple-light blur-3xl opacity-60"></div>
+                <div className="absolute -bottom-4 -right-4 w-48 h-48 rounded-full bg-pink-light blur-3xl opacity-60"></div>
+                <img
+                  src="public/necklace_hero.webp"
+                  alt="Jewelry Collection"
+                  className="w-full h-auto rounded-lg shadow-xl relative z-10 hover:shadow-2xl transition-shadow duration-300"
+                />
+              </div>
+            </div>
+            {/* Content */}
+            <div className="text-center mb-8">
+              <p className="text-lg max-w-md mx-auto text-gray-700 leading-relaxed">
+                Discover Subhag's exquisite collection of handcrafted jewelry that captures the essence of timeless beauty.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="jewel-btn-secondary hover:scale-105 transition-transform">New Arrivals</Button>
+              </div>
             </div>
           </div>
-          <div className="md:w-1/2">
-            <div className="relative">
-              <div className="absolute -top-4 -left-4 w-48 h-48 rounded-full bg-purple-light blur-3xl opacity-60"></div>
-              <div className="absolute -bottom-4 -right-4 w-48 h-48 rounded-full bg-pink-light blur-3xl opacity-60"></div>
-              <img
-                src="public/necklace_hero.webp"
-                alt="Jewelry Collection"
-                className="w-full h-auto rounded-lg shadow-xl relative z-10 hover:shadow-2xl transition-shadow duration-300"
-              />
+
+          {/* Desktop Layout: Image on right, Heading + Content on left */}
+          <div className="hidden md:flex md:flex-row items-center px-8">
+            {/* Left Side: Heading + Content */}
+            <div className="md:w-1/2 text-left">
+              <h2 className="text-6xl font-dancing font-bold mb-6 text-pink-dark animate-float">
+                Elegance in Every Detail
+              </h2>
+              <p className="text-xl mb-6 max-w-md text-gray-700 leading-relaxed">
+                Discover Subhag's exquisite collection of handcrafted jewelry that captures the essence of timeless beauty.
+              </p>
+              <div className="flex gap-4 justify-start">
+                <Button className="jewel-btn-secondary hover:scale-105 transition-transform">New Arrivals</Button>
+              </div>
+            </div>
+            {/* Right Side: Image */}
+            <div className="md:w-1/2 flex justify-center">
+              <div className="relative max-w-[80%] mx-auto">
+                <div className="absolute -top-4 -left-4 w-48 h-48 rounded-full bg-purple-light blur-3xl opacity-60"></div>
+                <div className="absolute -bottom-4 -right-4 w-48 h-48 rounded-full bg-pink-light blur-3xl opacity-60"></div>
+                <img
+                  src="public/necklace_hero.webp"
+                  alt="Jewelry Collection"
+                  className="w-full h-auto rounded-lg shadow-xl relative z-10 hover:shadow-2xl transition-shadow duration-300"
+                />
+              </div>
             </div>
           </div>
         </div>
