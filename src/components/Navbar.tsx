@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Heart, Menu, X, Search } from "lucide-react";
@@ -12,7 +11,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center space-x-2">
+            <img 
+              src="public/subhag-logo.webp" 
+              alt="Subhag Logo" 
+              className="h-10 w-auto"
+            />
             <h1 className="text-3xl font-dancing font-bold bg-gradient-to-r from-pink-dark to-purple bg-clip-text text-transparent">
               Subhag
             </h1>

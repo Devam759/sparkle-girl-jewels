@@ -1,12 +1,19 @@
-
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-pink-light via-white to-pink-light/20 py-16 md:py-24">
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-pink-light via-white to-pink-light/20 py-16 md:py-24">
       <div className="absolute inset-0 bg-sparkle-pattern opacity-40"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col md:flex-row items-center">
+        {/* Navbar */}
+        <nav className="bg-white shadow-md fixed w-full top-0 left-0 z-20 px-4 py-3 md:hidden">
+          <div className="flex justify-between items-center">
+            <h1 className="text-xl font-bold text-pink-dark">Subhag</h1>
+            <Button className="jewel-btn-primary">Menu</Button>
+          </div>
+        </nav>
+        
+        <div className="flex flex-col md:flex-row items-center mt-12 md:mt-0">
           <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
             <h2 className="text-4xl md:text-6xl font-dancing font-bold mb-6 text-pink-dark animate-float">
               Elegance in Every Detail
@@ -24,7 +31,7 @@ const Hero = () => {
               <div className="absolute -top-4 -left-4 w-48 h-48 rounded-full bg-purple-light blur-3xl opacity-60"></div>
               <div className="absolute -bottom-4 -right-4 w-48 h-48 rounded-full bg-pink-light blur-3xl opacity-60"></div>
               <img
-                src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1287&auto=format&fit=crop"
+                src="public/necklace_hero.webp"
                 alt="Jewelry Collection"
                 className="w-full h-auto rounded-lg shadow-xl relative z-10 hover:shadow-2xl transition-shadow duration-300"
               />
