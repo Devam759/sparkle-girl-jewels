@@ -22,7 +22,7 @@ const Hero = () => {
               Discover Subhag's exquisite collection of handcrafted jewelry that captures the essence of timeless beauty.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button className="jewel-btn-primary hover:scale-105 transition-transform">Explore Collection</Button>
+              {/* <Button className="jewel-btn-primary hover:scale-105 transition-transform">Explore Collection</Button> */}
               <Button className="jewel-btn-secondary hover:scale-105 transition-transform">New Arrivals</Button>
             </div>
           </div>
